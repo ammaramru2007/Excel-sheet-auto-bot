@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 app.use(express.json({ limit: '5mb' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname));
 
 const API_KEY = process.env.GROQ_API_KEY;
 
